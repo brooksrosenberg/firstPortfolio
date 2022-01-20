@@ -1,3 +1,4 @@
+/* general settings */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -7,32 +8,33 @@
 html {
     height: 100%;
 }
-
+/*beginning of body css settings */
 body {
     background-color: #ecebe2;
     margin: 0;
 }
-
-
+/*css setting of navbar and h1 tag in header */
 header {
     display: flex;
-    justify-self: space-between;
+    flex-wrap: wrap;
     padding: 1%;
     background-color: #95a8ac;
     color: #ecebe2;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-bottom: 2px solid #223745;
+    border-radius: 5px;
   }
 h1 {
     text-align: left;
     color: #ecebe2;
     font-size: 50px;
-    line-height: 75px;
+    line-height: 50px;
     margin: 0;
 }
 
 nav {
     text-align: right;
-    font: size 25px;
+    margin-left: 75%;
 }
 
 nav ul {
@@ -40,31 +42,56 @@ nav ul {
 }
 nav ul li {
     display: inline-block;
-    margin: 10px;
+    /* margin: 10px; */
+    font-size: 20px;
+    justify-content: space-evenly;
 } 
+/* end of css for header section */
 
+
+
+/* css for side bar of about me */
+aside { 
+    width: 30%;
+    padding-left: 15px;
+    margin-left: 15px;
+    margin-top: 25px;
+    float:left;
+    background-color: #95a8ac;
+    border: 2px solid #223745;
+    border-radius: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+/*beginning of css of main, covers both section and all articles */
 main {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     margin-top: 2%;
+}
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:stretch; 
+    justify-content: right;
 }
 
 article {
     padding: 40px;
-    margin: 0px 50px 10px 50px;
+    margin: 0px 50px 50px 50px;
     background-color: #95a8ac;
     flex: 200px;
     text-align: center;
-
+    border: 2px solid #223745;
+    border-radius: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    float: right;
+    justify-content: right;
 }
-section {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items:stretch;
+/* end of css styling for main */
 
-}
-
+/* css styling for footer*/
 footer {
     display: flex;
     flex-wrap: wrap;
@@ -73,8 +100,10 @@ footer {
     padding: 2%;
     color: #ecebe2;
     background-color: #95a8ac;
+    border-top: 2px solid #223745;
+    border-radius: 5px;
   }
-  
+  /* mdeia query */
   @media screen and (max-width: 768px) {
     header {
       flex-direction: column;
